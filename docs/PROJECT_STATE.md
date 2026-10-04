@@ -27,7 +27,8 @@ Ce fichier est la mémoire de travail du projet. Le lire avant une évolution, p
 
 - GitHub Pages : l'application est compatible avec un export statique Next.js (`output: "export"`) et un préfixe de dépôt, pour les liens et illustrations sous `https://<compte>.github.io/<dépôt>/`.
 - Le workflow `.github/workflows/deploy-pages.yml` installe les dépendances, génère `out/` et déploie cette archive à chaque envoi sur `main`.
-- L'espace de travail n'est pas encore un dépôt Git et aucun compte GitHub ni dépôt cible n'a été choisi. La publication effective reste à faire après réception de ces informations.
+- Dépôt GitHub : `https://github.com/BenjaminGardien/B-T-Corp.git`, branche `main`, premier envoi effectué le 4 octobre 2026.
+- URL de partage attendue : `https://benjamingardien.github.io/B-T-Corp/`. GitHub Pages doit être activé avec la source `GitHub Actions`; tant que l'action n'a pas terminé, l'URL peut répondre 404.
 
 ## Modèle métier
 
