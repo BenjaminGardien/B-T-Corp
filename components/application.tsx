@@ -25,7 +25,15 @@ import { Store, useStore } from "./store";
 import { Consumer } from "./consumer";
 import { Management } from "./management";
 function Shell() {
-  const path = usePathname();
+  const rawPath = usePathname();
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const pathWithBaseRemoved = rawPath.startsWith(basePath)
+    ? rawPath.slice(basePath.length) || "/"
+    : rawPath;
+  const path =
+    pathWithBaseRemoved.length > 1
+      ? pathWithBaseRemoved.replace(/\/$/, "")
+      : pathWithBaseRemoved;
   const { state, setState, reset } = useStore();
   const [menu, setMenu] = useState(false);
   const [locationOpen, setLocationOpen] = useState(false);
